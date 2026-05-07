@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.newrelic/mcp-server",
+  "version": "1.0.0",
+  "description": "Enterprise observability for AI. Connects agents to New Relic telemetry and NRQL.",
+  "title": "New Relic MCP Server",
+  "websiteUrl": "https://newrelic.com",
+  "source": "New Relic",
+  "repository": {
+    "url": "https://github.com/newrelic-partners/mcp-server-manifest"
+  },
+  "runtime": {
+    "type": "http",
+    "url": "https://mcp.newrelic.com/mcp/",
+    "headers": {
+      "api-key": "NRAK-****",
+      "include-tags": "discovery,alerting"
+    }
+  }
+}
