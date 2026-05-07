@@ -5,9 +5,9 @@
   "description": "Enterprise observability for AI. Connects agents to New Relic telemetry and NRQL.",
   "title": "New Relic MCP Server",
   "websiteUrl": "https://newrelic.com",
-  "source": "New Relic",
   "repository": {
-    "url": "https://github.com/newrelic-partners/mcp-server-manifest"
+    "url": "https://github.com/newrelic-partners/mcp-server-manifest/blob/main/README.md",
+    "source": "New Relic"
   },
   "runtime": {
     "type": "http",
