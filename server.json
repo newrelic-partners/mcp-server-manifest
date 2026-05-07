@@ -6,7 +6,7 @@
   "title": "New Relic MCP Server",
   "websiteUrl": "https://newrelic.com",
   "repository": {
-    "url": "https://github.com/newrelic-partners/mcp-server-manifest/blob/main/README.md",
+    "url": "https://github.com/newrelic-partners/mcp-server-manifest",
     "source": "New Relic"
   },
   "runtime": {

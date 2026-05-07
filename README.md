@@ -1,25 +1,44 @@
-# New Relic MCP
+# New Relic Observability MCP Server Manifest
+[![Registry](https://img.shields.io/badge/MCP-Registry-orange)](https://github.com/modelcontextprotocol/registry)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## What is New Relic MCP?
+This is the official Model Context Protocol (MCP) server for New Relic. It acts as a bridge between AI agents (like Claude Desktop, GitHub Copilot, or custom LLM orchestrators) and the New Relic Observability Platform.
 
-An [MCP](https://modelcontextprotocol.io) server implementation that connects AI agents and tools to New Relic's observability data. With this server, you can use natural language to query your telemetry data, investigate alerts, analyze performance, and generate intelligent insights from your monitoring infrastructure.
 
-## � Getting Started
 
-For detailed setup instructions and complete documentation, visit: **[New Relic MCP Documentation](https://docs.newrelic.com/docs/agentic-ai/mcp/overview)**
+By installing this server, your AI agents gain the ability to "see" and "act" on your telemetry data using natural language.
 
-### Quick Setup
+---
 
-1. **Set up authentication** (API key or OAuth2.0 - see full documentation)
-2. **Configure your MCP client** with the server endpoint
-3. **Start using natural language** to interact with your observability data
+## 🚀 Capabilities
 
-## Tool Categories
+This server exposes high-level tools that allow AI models to perform complex observability tasks:
 
-Some of the tools organized by category:
-- **Entity and Account Management**: Entity lookup, account management
-- **Alerting and Monitoring**: Alert policies, incident management, recent issues 
-- **Incident Response**: Change tracking, error and alert analysis
-- **Performance Analytics**: Golden metrics, logs, thread analysis
-- **Data Access**: NRQL queries, natural language processing
-- **Advanced Analysis**: Deployment impact assessment, entity log analysis
+- **Entity & Account Intelligence**: Search for services, hosts, and mobile apps across your entire stack.
+- **NRQL Power-User**: Execute any New Relic Query Language (NRQL) statement to fetch custom metrics, logs, and events.
+- **Incident Response**: List active issues, acknowledge incidents, and retrieve root-cause analysis details.
+- **Golden Metrics**: Automatically fetch the most important health indicators (Response Time, Error Rate, Throughput) for any entity.
+- **Alerting**: Manage alert policies and conditions.
+- **Change Tracking**: Correlate recent deployments with performance regressions.
+
+---
+
+## 🛠 Installation
+
+This is a **Remote HTTP Server**. You do not need to download or compile code. To add this to your MCP-compatible client (like Claude Desktop), add the following to your configuration file:
+
+### Configuration (e.g., `claude_desktop_config.json`)
+
+```json
+{
+  "mcpServers": {
+    "new-relic": {
+      "url": "[https://mcp.newrelic.com/mcp/](https://mcp.newrelic.com/mcp/)",
+      "type": "http",
+      "headers": {
+        "api-key": "YOUR_NEW_RELIC_USER_API_KEY",
+        "include-tags": "discovery,alerting,nrql"
+      }
+    }
+  }
+}
