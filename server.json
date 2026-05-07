@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.newrelic/mcp-server",
+  "name": "io.github.newrelic-partners/mcp-server-manifest",
   "version": "1.0.0",
   "description": "Enterprise observability for AI. Connects agents to New Relic telemetry and NRQL.",
   "title": "New Relic MCP Server",

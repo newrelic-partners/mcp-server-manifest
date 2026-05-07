@@ -8,6 +8,7 @@ This is the official Model Context Protocol (MCP) server for New Relic. It acts 
 
 By installing this server, your AI agents gain the ability to "see" and "act" on your telemetry data using natural language.
 
+``
 ---
 
 ## 🚀 Capabilities
